@@ -16,8 +16,15 @@
     "noEmit": false,
     "jsx": "react-jsx",
     "typeRoots": ["node_modules/@types", "./src/types"],
-    "jsxImportSource": "@emotion/react"
+    "jsxImportSource": "@emotion/react",
+    "paths": {
+      "@emotion/react/jsx-runtime": [
+        "./node_modules/@emotion/react/jsx-runtime"
+      ],
+      "@emotion/react": ["./node_modules/@emotion/react"],
+      "@emotion/styled": ["./node_modules/@emotion/styled"]
+    }
   },
   "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "build"]
 }
