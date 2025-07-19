@@ -13,7 +13,15 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"],
   },
   devServer: {
-    static: path.join(__dirname, "src"),
+    static: [
+      {
+        directory: path.join(__dirname, "src"),
+      },
+      {
+        directory: path.join(__dirname, "public"),
+        publicPath: "/",
+      },
+    ],
     historyApiFallback: true,
     port: 3000,
   },
