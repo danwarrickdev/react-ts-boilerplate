@@ -3,12 +3,20 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.tsx",
-  output: { path: path.join(__dirname, "build"), filename: "index.bundle.js" },
+  output: {
+    path: path.join(__dirname, "build"),
+    filename: "index.bundle.js",
+    publicPath: "/",
+  },
   mode: process.env.NODE_ENV || "development",
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
-  devServer: { static: path.join(__dirname, "src") },
+  devServer: {
+    static: path.join(__dirname, "src"),
+    historyApiFallback: true,
+    port: 3000,
+  },
   module: {
     rules: [
       {
