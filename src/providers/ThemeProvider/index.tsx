@@ -7,7 +7,6 @@ interface ThemeProviderProps {
 }
 
 type ThemeContextType = {
-  isDark: boolean;
   setIsDark: (isDark: boolean) => void;
 };
 
@@ -18,7 +17,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const theme = isDark ? darkTheme : lightTheme;
 
   return (
-    <ThemeContext.Provider value={{ isDark, setIsDark }}>
+    <ThemeContext.Provider value={{ setIsDark }}>
       <EmotionThemeProvider theme={theme}>{children}</EmotionThemeProvider>
     </ThemeContext.Provider>
   );
