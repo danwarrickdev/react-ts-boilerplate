@@ -1,5 +1,5 @@
-import { NavLink } from "react-router";
-import { useTheme } from "../../providers/ThemeProvider";
+import { NavLink } from 'react-router';
+import { useTheme } from '../../providers/ThemeProvider';
 
 export const Header = () => {
   const { setIsDark } = useTheme();
