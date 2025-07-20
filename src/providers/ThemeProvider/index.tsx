@@ -1,6 +1,6 @@
-import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
-import { createContext, useContext, useState } from "react";
-import { darkTheme, lightTheme } from "../../theme";
+import { ThemeProvider as EmotionThemeProvider } from '@emotion/react';
+import { createContext, useContext, useState } from 'react';
+import { darkTheme, lightTheme } from '../../theme';
 
 interface ThemeProviderProps {
   children: React.ReactNode;
@@ -26,7 +26,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (context === undefined) {
-    throw new Error("useTheme must be used within a ThemeProvider");
+    throw new Error('useTheme must be used within a ThemeProvider');
   }
   return context;
 };

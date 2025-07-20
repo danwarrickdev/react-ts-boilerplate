@@ -1,7 +1,7 @@
-import React from "react";
-import { BrowserRouter } from "react-router";
-import { GlobalStyles } from "./GlobalStyles";
-import { ThemeProvider } from "./ThemeProvider";
+import React from 'react';
+import { BrowserRouter } from 'react-router';
+import { GlobalStyles } from './GlobalStyles';
+import { ThemeProvider } from './ThemeProvider';
 
 interface ProvidersProps {
   children: React.ReactNode;
