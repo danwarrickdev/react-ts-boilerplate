@@ -16,7 +16,8 @@
     "prepush": "npm run type-check && npm run lint && npm run test",
     "prepare": "husky",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "check-build-size": "rm -rf build && npm run build && find build -name \"*.js\" -exec gzip -k {} \\; && du -h build/*.gz"
   },
   "dependencies": {
     "@emotion/babel-plugin": "^11.13.5",
